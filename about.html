@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>عن المقياس - Stress Scale</title>
+<link rel="stylesheet" href="style-about.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+<!-- الشريط العلوي -->
+<nav class="navbar">
+    <div class="nav-left">
+        <i class="fa-solid fa-brain"></i>
+        <span>مقياس الضغط النفسي</span>
+    </div>
+    <ul class="nav-links">
+        <li><a href="index.html">الرئيسية</a></li>
+       
+        
+    </ul>
+</nav>
+
+<!-- الهيدر -->
+<header>
+    <i class="fa-solid fa-brain"></i>
+    <h1>مقياس الضغط النفسي</h1>
+    <p>أداة لتقييم مستوى الضغط النفسي لدى طلاب الجامعات</p>
+</header>
+
+<!-- شريط نسبة متحرك -->
+<div class="progress-container about-progress">
+    <div id="progressBarAbout"></div>
+</div>
+
+<!-- طرق الاستخدام -->
+<section class="usage">
+    <h2>طرق الاستخدام</h2>
+    <p>
+        1. اقرأ كل سؤال بتمعن.<br>
+        2. أجب بنعم أو لا حسب شعورك.<br>
+        3. بعد الانتهاء، اضغط زر "احسب النتيجة".<br>
+        4. ستظهر النتيجة مع نصائح للتقليل من الضغط النفسي.
+    </p>
+</section>
+
+<!-- بطاقات المعلومات -->
+<section class="about-content">
+    <div class="about-card">
+        <i class="fa-solid fa-check"></i>
+        <h2>تعريف المقياس</h2>
+        <p>هو أداة لتقييم مستوى الضغط النفسي لدى الطلاب وتحليل نتائجه.</p>
+    </div>
+    <div class="about-card">
+        <i class="fa-solid fa-clock"></i>
+        <h2>مدة الاختبار</h2>
+        <p>يستغرق حوالي 5–10 دقائق للإجابة على جميع الأسئلة.</p>
+    </div>
+    <div class="about-card">
+        <i class="fa-solid fa-chart-line"></i>
+        <h2>كيفية الحساب</h2>
+        <p>يتم حساب نسبة الإجابات الإيجابية لتحليل مستوى الضغط النفسي.</p>
+    </div>
+    <div class="about-card">
+        <i class="fa-solid fa-lightbulb"></i>
+        <h2>نصائح عامة</h2>
+        <p>استخدم تقنيات الاسترخاء، تنظيم الوقت، وممارسة الرياضة لتخفيف الضغط.</p>
+    </div>
+</section>
+
+<!-- الفوتر -->
+<footer class="footer">
+    <p>جامعة سومر © 2026 |   </p>
+</footer>
+
+<script>
+    // مثال شريط نسبة صعود/نزول
+    let progress = 0;
+    const bar = document.getElementById('progressBarAbout');
+
+    function animateProgress() {
+        if(progress <= 80){ // نسبة افتراضية
+            bar.style.width = progress + "%";
+            progress += 1;
+            requestAnimationFrame(animateProgress);
+        }
+    }
+    animateProgress();
+</script>
+
+</body>
+</html>

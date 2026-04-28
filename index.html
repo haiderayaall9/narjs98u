@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>مقياس الضغط النفسي</title>
+
+    <!-- Icons -->
+    <link rel="stylesheet"
+     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="customAlert" class="custom-alert">
+        <p id="customAlertText"></p>
+        <button onclick="closeAlert()">حسناً</button>
+    </div>
+<div class="container">
+  
+    <nav class="navbar">
+ 
+        <div class="nav-left">
+            <i class="fa-solid fa-brain"></i>
+            <span>مقياس الضغط النفسي</span>
+        </div>
+    
+        <ul class="nav-links">
+            <li><a href="#">الرئيسية</a></li>
+          
+
+            <li><a href="about.html">طريقة التقييم</a></li>
+            
+        </ul>
+    </nav>
+    
+
+
+    <header>
+
+      
+        
+        <!-- أيقونات الضغط النفسي يمين -->
+       
+        
+            <img src="img/h1.jpg" 
+             class="header-img left" alt="ضغط نفسي طلاب">
+           
+           <i class="fa-solid fa-brain"></i>
+           <h1> الضغط</h1>
+           <p>أجب بـ نعم أو لا</p>
+           
+           <img src="img/h2.jpg" 
+                class="header-img right" alt="توتر طلاب جامعة">
+
+    </header>
+    <div class="progress-container">
+        <div id="progressBar"></div>
+    </div>
+
+    <form id="stressForm">
+
+        <div class="cards">
+    
+            <!-- السؤال 1 -->
+            <div class="card active">
+                <span>1</span>
+                <p>هل المنهاج الدراسي له دور في تطور التوتر لديك</p>
+                <div class="answers">
+                    <label><input type="radio" name="q1" value="نعم"> نعم</label>
+                    <label><input type="radio" name="q1" value="لا"> لا</label>
+                </div>
+            </div>
+    
+            <!-- السؤال 2 -->
+            <div class="card">
+                <span>2</span>
+                <p>هل كثرة الواجبات وتزاحمها تشعرك بالتوتر</p>
+                <div class="answers">
+                    <label><input type="radio" name="q2" value="نعم"> نعم</label>
+                    <label><input type="radio" name="q2" value="لا"> لا</label>
+                </div>
+            </div>
+    
+            <!-- السؤال 3 -->
+            <div class="card">
+                <span>3</span>
+                <p>هل قلة النوم عندك تشعرك بالتوتر أثناء الدوام في اليوم التالي</p>
+                <div class="answers">
+                    <label><input type="radio" name="q3" value="نعم"> نعم</label>
+                    <label><input type="radio" name="q3" value="لا"> لا</label>
+                </div>
+            </div>
+    
+            <!-- السؤال 4 -->
+            <div class="card">
+                <span>4</span>
+                <p>هل نقص الدعم الأسري يشعرك بالتوتر</p>
+                <div class="answers">
+                    <label><input type="radio" name="q4" value="نعم"> نعم</label>
+                    <label><input type="radio" name="q4" value="لا"> لا</label>
+                </div>
+            </div>
+    
+            <!-- السؤال 5 -->
+            <div class="card">
+                <span>5</span>
+                <p>هل تواجه بصعوبة بالنوم بسبب التفكير بالدراسة</p>
+                <div class="answers">
+                    <label><input type="radio" name="q5" value="نعم"> نعم</label>
+                    <label><input type="radio" name="q5" value="لا"> لا</label>
+                </div>
+            </div>
+    
+            <!-- السؤال 6 -->
+            <div class="card">
+                <span>6</span>
+                <p>هل المنافسة الشديدة بينك وبين زملائك تشعرك بالتوتر</p>
+                <div class="answers">
+                    <label><input type="radio" name="q6" value="نعم"> نعم</label>
+                    <label><input type="radio" name="q6" value="لا"> لا</label>
+                </div>
+            </div>
+    
+            <!-- السؤال 7 -->
+            <div class="card">
+                <span>7</span>
+                <p>هل توقعات عائلتك بدرجات عالية تشعرك بالتوتر</p>
+                <div class="answers">
+                    <label><input type="radio" name="q7" value="نعم"> نعم</label>
+                    <label><input type="radio" name="q7" value="لا"> لا</label>
+                </div>
+            </div>
+    
+            <!-- السؤال 8 -->
+            <div class="card">
+                <span>8</span>
+                <p>هل الامتحانات وضيق الوقت تشعرك بالتوتر</p>
+                <div class="answers">
+                    <label><input type="radio" name="q8" value="نعم"> نعم</label>
+                    <label><input type="radio" name="q8" value="لا"> لا</label>
+                </div>
+            </div>
+    
+            <!-- السؤال 9 -->
+            <div class="card">
+                <span>9</span>
+                <p>هل الخوف من الفشل يشعرك بالتوتر ويجعل النجاح مستحيلاً</p>
+                <div class="answers">
+                    <label><input type="radio" name="q9" value="نعم"> نعم</label>
+                    <label><input type="radio" name="q9" value="لا"> لا</label>
+                </div>
+            </div>
+    
+            <!-- السؤال 10 -->
+            <div class="card">
+                <span>10</span>
+                <p>هل وجود علاقة سلبية مع الأستاذ يشعرك بالتوتر من عدم النجاح</p>
+                <div class="answers">
+                    <label><input type="radio" name="q10" value="نعم"> نعم</label>
+                    <label><input type="radio" name="q10" value="لا"> لا</label>
+                </div>
+            </div>
+    
+            <!-- السؤال 11 -->
+            <div class="card">
+                <span>11</span>
+                <p>هل صعوبة التعلم والصدمات تشعرك بالتوتر الشديد</p>
+                <div class="answers">
+                    <label><input type="radio" name="q11" value="نعم"> نعم</label>
+                    <label><input type="radio" name="q11" value="لا"> لا</label>
+                </div>
+            </div>
+    
+            <!-- السؤال 12 -->
+            <div class="card">
+                <span>12</span>
+                <p>هل المشاكل العائلية المستمرة تشعرك بالتوتر</p>
+                <div class="answers">
+                    <label><input type="radio" name="q12" value="نعم"> نعم</label>
+                    <label><input type="radio" name="q12" value="لا"> لا</label>
+                </div>
+            </div>
+    
+            <!-- السؤال 13 -->
+            <div class="card">
+                <span>13</span>
+                <p>هل التنمر له دور في شعورك بالتوتر</p>
+                <div class="answers">
+                    <label><input type="radio" name="q13" value="نعم"> نعم</label>
+                    <label><input type="radio" name="q13" value="لا"> لا</label>
+                </div>
+            </div>
+    
+            <!-- السؤال 14 -->
+            <div class="card">
+                <span>14</span>
+                <p>هل قلة التركيز لديك تؤدي إلى توترك</p>
+                <div class="answers">
+                    <label><input type="radio" name="q14" value="نعم"> نعم</label>
+                    <label><input type="radio" name="q14" value="لا"> لا</label>
+                </div>
+            </div>
+    
+            <!-- السؤال 15 -->
+            <div class="card">
+                <span>15</span>
+                <p>هل توترك يؤدي إلى تسارع ضربات القلب</p>
+                <div class="answers">
+                    <label><input type="radio" name="q15" value="نعم"> نعم</label>
+                    <label><input type="radio" name="q15" value="لا"> لا</label>
+                </div>
+            </div>
+    
+            <!-- السؤال 16 -->
+            <div class="card">
+                <span>16</span>
+                <p>هل جربت بأن المشي أو الجري وممارسة التمارين تخفف أو تنهي التوتر لديك</p>
+                <div class="answers">
+                    <label><input type="radio" name="q16" value="نعم"> نعم</label>
+                    <label><input type="radio" name="q16" value="لا"> لا</label>
+                </div>
+            </div>
+    
+            <!-- السؤال 17 -->
+            <div class="card">
+                <span>17</span>
+                <p>هل شعرت بأعراض بدنية أثناء توترك مثل الصداع والأرق والتعب وغيرها</p>
+                <div class="answers">
+                    <label><input type="radio" name="q17" value="نعم"> نعم</label>
+                    <label><input type="radio" name="q17" value="لا"> لا</label>
+                </div>
+            </div>
+    
+            <!-- السؤال 18 -->
+            <div class="card">
+                <span>18</span>
+                <p>هل يحدث لك شعور بالإحباط والغضب والبكاء عندما ينتابك التوتر</p>
+                <div class="answers">
+                    <label><input type="radio" name="q18" value="نعم"> نعم</label>
+                    <label><input type="radio" name="q18" value="لا"> لا</label>
+                </div>
+            </div>
+    
+            <!-- السؤال 19 -->
+            <div class="card">
+                <span>19</span>
+                <p>هل شعرت بالملل والخمول وسرعة الانفعال عند توترك</p>
+                <div class="answers">
+                    <label><input type="radio" name="q19" value="نعم"> نعم</label>
+                    <label><input type="radio" name="q19" value="لا"> لا</label>
+                </div>
+            </div>
+    
+            <!-- السؤال 20 -->
+            <div class="card">
+                <span>20</span>
+                <p>هل انتابتك حالة من الهلع وفقدان الوعي وضيق النفس في أسوأ حالات توترك</p>
+                <div class="answers">
+                    <label><input type="radio" name="q20" value="نعم"> نعم</label>
+                    <label><input type="radio" name="q20" value="لا"> لا</label>
+                </div>
+            </div>
+    
+            <!-- الأسهم خارج البطاقات على اليسار -->
+            <div class="nav-arrows left-arrows">
+                
+                <i class="fa-solid fa-arrow-left" onclick="nextQuestion()"></i>
+                <i class="fa-solid fa-arrow-right" onclick="prevQuestion()"></i>
+            </div>
+    
+        </div>
+    
+        <button type="button" onclick="calculateResult()">
+            <i class="fa-solid fa-chart-simple"></i> عرض النتيجة
+        </button>
+    
+    </form>
+
+
+    <div id="result"></div>
+        <div id="tipsButtonContainer" style="text-align:center;"></div>
+
+    <div id="result"></div>
+    <footer class="footer" id="contact">
+        <div class="footer-content">
+            <p>تواصل معنا</p>
+            <ul class="contact-links">
+                <li><i class="fa-solid fa-envelope"></i> example@email.com</li>
+                <li><i class="fa-solid fa-phone"></i> 0770 123 4567</li>
+                <li><i class="fa-solid fa-globe"></i> www.university.edu.iq</li>
+            </ul>
+            <div class="social-icons">
+                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+            </div>
+            <p class="copy">&copy; 2026 مقياس الضغط النفسي</p>
+        </div>
+    </footer>
+    
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

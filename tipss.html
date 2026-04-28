@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>نصائح مقياس الضغط النفسي</title>
+
+    <!-- Font Awesome للرموز -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!-- CSS الخارجي -->
+    <link rel="stylesheet" href="tips.css">
+</head>
+<body>
+
+<!-- الشريط العلوي -->
+<nav class="navbar">
+    <div class="nav-left">
+        <i class="fa-solid fa-brain"></i>
+        <span>مقياس الضغط النفسي</span>
+    </div>
+    <ul class="nav-links">
+        <li><a href="index.html">الرئيسية</a></li>
+        <li><a href="tips.html" class="active">نصائح</a></li>
+        <li><a href="about.html">طريقة التقييم</a></li>
+        
+    </ul>
+</nav>
+
+<!-- العنوان -->
+<header class="tips-header">
+    <h1>نصائح للتخفيف من الضغط النفسي المتوسط </h1>
+    <p>مجموعة من النصائح العملية للطلاب الجامعيين</p>
+</header>
+
+<!-- قسم النصائح -->
+<section class="tips-container">
+    <div class="tip-card">
+        <i class="fa-solid fa-person-running"></i>
+        <h3>مارس الرياضة بانتظام</h3>
+        <p>الرياضة تساعد على إفراز هرمونات السعادة وتقليل التوتر.</p>
+    </div>
+    <div class="tip-card">
+        <i class="fa-solid fa-bed"></i>
+        <h3>نم جيدًا</h3>
+        <p>الحصول على نوم كافي يعزز التركيز ويخفف التوتر النفسي.</p>
+    </div>
+    <div class="tip-card">
+        <i class="fa-solid fa-head-side-mask"></i>
+        <h3>مارس التأمل والتنفس العميق</h3>
+        <p>جلسات التأمل تساعد على تهدئة العقل وتقليل القلق.</p>
+    </div>
+    <div class="tip-card">
+        <i class="fa-solid fa-book-open-reader"></i>
+        <h3>نظم وقت الدراسة</h3>
+        <p>إدارة الوقت تساعد على تقليل الضغط النفسي والارتباك.</p>
+    </div>
+    <div class="tip-card">
+        <i class="fa-solid fa-users"></i>
+        <h3>تواصل مع الآخرين</h3>
+        <p>التحدث مع الأصدقاء أو العائلة يخفف الشعور بالوحدة والتوتر.</p>
+    </div>
+    <div class="tip-card">
+        <i class="fa-solid fa-mug-hot"></i>
+        <h3>خذ فترات استراحة</h3>
+        <p>استراحة قصيرة بين الدراسة تساعد على تجديد النشاط الذهني.</p>
+    </div>
+</section>
+
+<!-- شريط أسفل الصفحة -->
+<footer class="footer">
+    <p> كلية علوم الحاسوب &copy; 2026 مقياس الضغط النفسي</p>
+    <div class="social-icons">
+        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+        <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+    </div>
+</footer>
+
+</body>
+<script>
+    const tipsData = {
+        "منخفض": [
+            "استمر على أسلوب حياتك الهادئ وحافظ على صحتك النفسية",
+            "مارس الهوايات التي تحبها"
+        ],
+        "متوسط": [
+            "مارس الرياضة بانتظام لتخفيف التوتر",
+            "نظم وقت الدراسة وخذ فترات استراحة"
+        ],
+        "مرتفع": [
+            "مارس التأمل والتنفس العميق يوميًا",
+            "تواصل مع الأصدقاء أو العائلة لتخفيف الضغط النفسي",
+            "احرص على النوم الكافي واتباع نظام غذائي صحي"
+        ]
+    };
+    
+    // استخراج المستوى من الرابط
+    const urlParams = new URLSearchParams(window.location.search);
+    const level = urlParams.get('level');
+    
+    // وضع النصائح في القسم
+    const tipsContainer = document.querySelector('.tips-container');
+    if(level && tipsData[level]) {
+        tipsContainer.innerHTML = tipsData[level].map(tip => `
+            <div class="tip-card">
+                <i class="fa-solid fa-lightbulb"></i>
+                <h3>نصيحة</h3>
+                <p>${tip}</p>
+            </div>
+        `).join('');
+    }
+    </script>
+</html>
